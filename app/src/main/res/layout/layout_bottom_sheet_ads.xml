@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetContainer"
+    android:background="@drawable/background_bottom_sheet">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Создать новое объявление"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginStart="15dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin_transport"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_car"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Transport"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin_estate"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_estate"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/estate"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin_work"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_work"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/work"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin_services"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_services"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/services"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lin_etc"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_camera"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/etc"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

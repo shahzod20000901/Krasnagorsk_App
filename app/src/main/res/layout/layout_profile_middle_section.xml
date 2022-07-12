@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profile_linear_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/share_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/share_icon" />
+
+                <ImageView
+                    android:id="@+id/notification_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="260dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/notifications_icon" />
+
+                <ImageView
+                    android:id="@+id/settings_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/settings_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_linear_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#222122"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="40dp"
+                        android:text="Имя"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/status_of_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Частное лицо"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/number_of_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Номер профиля 180 134 749"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_profile" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/email_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/default_dark_color"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/email_icon" />
+
+                    <TextView
+                        android:id="@+id/user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="25dp"
+                        android:text="user@gmail.com"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/date_liner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/default_dark_color"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/date_icon" />
+
+                    <TextView
+                        android:id="@+id/user_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="25dp"
+                        android:text="В приложении с (месяц, год)"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/chage_settings_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="ИЗМЕНИТЬ"
+                        android:textColor="@color/default_color"
+                        android:textSize="15dp"
+                        android:textStyle="normal" />
+
+                    <Button
+                        android:id="@+id/btn_sign_up"
+                        android:layout_width="220dp"
+                        android:layout_height="35dp"
+                        android:text="Регистрация"
+                        android:background="@drawable/design_btn"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="35dp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/orders_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Заказы"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/orders_icon" />
+
+                    <TextView
+                        android:id="@+id/finished_orders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="2 завершённых"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/get_finished_orders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="ПЕРЕЙТИ К ЗАКАЗАМ"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/manage_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/manage_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Управление профилем"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_baseline_create_24" />
+
+                    <TextView
+                        android:id="@+id/manage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Доступные проверки и расширения"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/get_manage_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="ПЕРЕЙТИ К УПРАВЛЕНИЕ"
+                    android:textColor="@color/default_dark_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ads_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ads_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Объявления"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ads_icon" />
+
+                    <TextView
+                        android:id="@+id/ads"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="2 активных"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/get_ads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="ПЕРЕЙТИ К ОБЪЯВЛЕНИЯМ"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/WALLET_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/wallet_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Кошелёк"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/wallet_icon" />
+
+                    <TextView
+                        android:id="@+id/wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/get_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="ПЕРЕЙТИ В КОШЕЛЁК"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phone_number_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/phone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Телефоны"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/phone_icon" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="+7 953 148 71 61"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/security_mode_icon" />
+
+                    <TextView
+                        android:id="@+id/desciption_security"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/security_mode_desciption"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/manage_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="УПРАВЛЯТЬ НОМЕРАМИ"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/feedback_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/feedback_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Мои отзывы"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/message_icon" />
+
+                    <TextView
+                        android:id="@+id/feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Нет отзывов"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/get_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="ПЕРЕЙТИ К МОИМ ОТЗЫВАМ"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/social_media_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/social_media_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Соцсети и сервисы"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="normal|bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/social_media"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Facebook"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/get_social_media"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="ИЗМЕНИТЬ"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/garrage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Гараж"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Ваш автомобиль"
+                    android:textColor="#514F51"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/delivery_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Крас доставка"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="В пункт выдачи и курьером"
+                    android:textColor="#514F51"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/call_through_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Звонки через приложения"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Включены"
+                    android:textColor="#514F51"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sales_counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Счётчик продаж"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Включён"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="#514F51"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Помощь"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Ответы на частные вопросы и поддержка"
+                    android:textColor="#514F51"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Устройства"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Где вы сейчас авторизованы"
+                    android:textColor="#514F51"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/safe_entarnce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Безопасный вход"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Выключен"
+                    android:textColor="#514F51"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/delete_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Удаление профиля"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Все содержимое будет стёрто"
+                    android:textColor="#514F51"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/change_password_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/change_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="ИЗМЕНИТЬ ПАРОЛЬ"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="60dp"
+                android:background="@color/default_dark_color"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sign_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="180dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="ВЫЙТИ"
+                    android:textColor="@color/default_color"
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Krasnagorsk_App</string>
+    <string name="Search">Search</string>
+    <string name="Liked">Liked</string>
+    <string name="Ads">Ads</string>
+    <string name="Messages">Messages</string>
+    <string name="Profile">Profile</string>
+    <string name="security_mode_desciption">Чтобы ваш настоящий номер не попал \n в базы машенников, мы показываем \n вместо него подменный, а звонки \n переводим вам. Эту защиту нельзя \n отключить</string>
+    <string name="recomen">Рекоменд</string>
+    <string name="fresh">Свежие</string>
+    <string name="aroundyou">Рядом с вами</string>
+    <string name="help_question">Запишите видео - оно поможет покупателям \n оценить ваше предложение без личной встречи.\n \n Ролик нужно разместить на Youtube c доступом \n по ссылке или для всех. А в это поле вставить \n адрес видео.</string>
+
+
+    <!-- Transports -->
+    <string name="Transport">Транспорт</string>
+
+    <string name="cars">Автомобили</string>
+    <string name="motorbike">Мотоциклы и мототехника</string>
+    <string name="tracks_and_special_tracks">Грузовики и спецтехника</string>
+    <string name="spare_parts">Запчасти и аксессуары</string>
+
+
+    <string name="estate">Недвижимость</string>
+    <string name="work">Работа</string>
+    <string name="services">Услуги</string>
+    <string name="etc">Вещи, электроника, хобби, животные, бизнес</string>
+</resources>

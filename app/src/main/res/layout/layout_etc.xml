@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Categories.LayoutTransport">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_cancel"
+            android:layout_margin="18dp"
+            android:id="@+id/cancel_transport"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить и выйти"
+            android:textColor="@color/colorSecondaryText"
+            android:textStyle="normal"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="18dp"
+            android:id="@+id/save_and_exit"/>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Внешний вид"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="Фотографии"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="30dp"/>
+
+
+
+        <ImageView
+            android:id="@+id/set_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_photo"
+            android:layout_gravity="center"
+            />
+
+    <TextView
+              android:id="@+id/text_add_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Добавить фото"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="5dp"
+        android:text="Видео"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+
+    <LinearLayout
+        android:id="@+id/link_video"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_design"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/Search_line"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:hint="Ссылка на видео"
+            android:padding="8dp"
+            android:textColorHint="#535151"
+            android:background="@android:color/transparent"
+            android:textColor="@color/white"
+
+            />
+
+        <ImageView
+            android:id="@+id/help_question"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_question"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Продолжить"
+        android:background="@drawable/design_btn"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btn_continue"/>
+
+</LinearLayout>

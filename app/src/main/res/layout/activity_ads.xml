@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayou1">
+
+        <include layout="@layout/layout_top_tabs"/>
+
+
+    </RelativeLayout>
+
+    <!-- Middle Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayou2">
+
+        <include layout="@layout/layout_center_viewpager"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="+ Разместить объвление"
+            android:background="@drawable/design_btn"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="580dp"
+            android:id="@+id/add_product"/>
+
+
+    </RelativeLayout>
+
+
+    <!-- Bottom navigation view ex -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayou3">
+
+        <include layout="@layout/layout_bottomnavigationviewex"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
