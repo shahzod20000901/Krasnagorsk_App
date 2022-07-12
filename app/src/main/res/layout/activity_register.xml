@@ -47,7 +47,6 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
         android:hint="Электронная почта"
-        android:inputType="textEmailAddress"
         android:padding="8dp"
         android:textColorHint="#535151"
         android:background="@drawable/edit_design"
@@ -62,7 +61,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
         android:hint="Номер телефона"
-        android:inputType="number"
+        android:inputType="phone"
         android:padding="8dp"
         android:textColorHint="#535151"
         android:background="@drawable/edit_design"
@@ -87,11 +86,17 @@
         android:layout_marginTop="20dp"
         android:hint="Пароль"
         android:padding="8dp"
-        android:inputType="textPassword"
         android:textColorHint="#535151"
         android:background="@drawable/edit_design"
         android:textColor="@color/white"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пароль не должен быть меньше 6 символов \nиначе регастрация будет провалена"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:layout_marginStart="12dp"/>
 
     <EditText
         android:id="@+id/id_password_check"
@@ -99,7 +104,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:inputType="textPassword"
         android:layout_marginTop="20dp"
         android:hint="Пароль ещё раз"
         android:padding="8dp"

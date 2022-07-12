@@ -25,14 +25,18 @@ public class ProfileActivity extends AppCompatActivity {
     private Context mContext=ProfileActivity.this;
     private String TAG="ProfileActivity.this";
     private ImageView profileMenu;
-    private Button btn_sign_up;
+    public static Button btn_sign_up;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         setupBottomNavigationViewEx();
+        init();
+
+
 
         btn_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,9 +46,16 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        if(!(RegisterActivity.user==null))
+        {
+            btn_sign_up.setVisibility(View.INVISIBLE);
+        }
+
+
 
 
     }
+
 
     private void init(){
         btn_sign_up=findViewById(R.id.btn_sign_up);

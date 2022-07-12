@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "827740521739",
+    "firebase_url": "https://krasnagorsk-app-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "krasnagorsk-app",
+    "storage_bucket": "krasnagorsk-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827740521739:android:d532609238561fa5bc0e0e",
+        "android_client_info": {
+          "package_name": "com.example.krasnagorsk_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827740521739-43sg0vn6f7rppsidpiai39jigvc4v90v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.krasnagorsk_app",
+            "certificate_hash": "c039ec9af2a9634b2a02cb3a9fa7e794539c7634"
+          }
+        },
+        {
+          "client_id": "827740521739-qf5b57re74m7j34bu97bkrbb33uql4li.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAY-ALM5x31R8NPkZ92XW5lQYYIw2ZT4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827740521739-qf5b57re74m7j34bu97bkrbb33uql4li.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
