@@ -87,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:text="Номер профиля 180 134 749"
+                        android:text="Номер телефона: 180 134 749"
                         android:textColor="@color/white"
                         android:textSize="15dp"
                         android:textStyle="normal" />
@@ -98,7 +98,7 @@
                     android:id="@+id/user_profile_image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginLeft="70dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/ic_profile" />
 
@@ -185,6 +185,7 @@
                         android:layout_width="220dp"
                         android:layout_height="35dp"
                         android:text="Регистрация"
+                        android:visibility="invisible"
                         android:background="@drawable/design_btn"
                         android:layout_marginTop="15dp"
                         android:layout_marginStart="35dp"/>

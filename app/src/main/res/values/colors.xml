@@ -10,7 +10,7 @@
     <color name="default_color">#8424B0</color>
     <color name="active_color">#1E49EA</color>
     <color name="default_dark_color">#222122</color>
-
+    <color name="color_product_design">#403F3F</color>
     <color name="colorSecondaryText">#AEA8A8</color>
 
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -27,15 +27,15 @@
         <include layout="@layout/layout_center_viewpager"/>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="+ Разместить объвление"
-            android:background="@drawable/design_btn"
+            android:id="@+id/add_product"
+            android:layout_width="390dp"
+            android:layout_height="63dp"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="557dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginTop="580dp"
-            android:id="@+id/add_product"/>
+            android:background="@drawable/design_btn"
+            android:text="+ Разместить объвление"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>
@@ -43,11 +43,11 @@
 
     <!-- Bottom navigation view ex -->
     <RelativeLayout
+        android:id="@+id/relLayou3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/relLayou3">
+        android:layout_height="wrap_content">
 
-        <include layout="@layout/layout_bottomnavigationviewex"/>
+        <include layout="@layout/layout_bottomnavigationviewex" />
 
     </RelativeLayout>
 
@@ -56,4 +56,4 @@
 
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

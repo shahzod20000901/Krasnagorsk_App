@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.krasnagorsk_app.Profile.ProfileActivity;
@@ -24,6 +25,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText id_username, id_email, id_phone_number, id_password, id_password_check;
@@ -31,20 +36,23 @@ public class RegisterActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private Button sign_up_user;
     private FirebaseAuth mAuth;
-
-    private FirebaseDatabase mData=FirebaseDatabase.getInstance();
-    private  DatabaseReference myRef;
+    private DatabaseReference myRef;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance("https://krasnagorsk-app-default-rtdb.europe-west1.firebasedatabase.app/");
+    private TextView tv_signIn;
     private FirebaseAuth.AuthStateListener mAuthlistener;
-    private final String USERDATA="Users";
+    private String USERDATA="Users";
     public static FirebaseUser user;
+    private String date;
+    SimpleDateFormat currentDate = new SimpleDateFormat("dd/MM/yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        mAuth = FirebaseAuth.getInstance();
-        myRef=mData.getReference(USERDATA);
+        Calendar calendar=Calendar.getInstance();
+        date=currentDate.format(calendar.getTime());
         init();
+        mAuth = FirebaseAuth.getInstance();
 
         sign_up_user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +60,15 @@ public class RegisterActivity extends AppCompatActivity {
                 createAccount();
             }
         });
+
+        tv_signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         mAuthlistener=new FirebaseAuth.AuthStateListener() {
             @Override
@@ -82,10 +99,9 @@ public class RegisterActivity extends AppCompatActivity {
         String username = id_username.getText().toString();
         String email = id_email.getText().toString();
         String phone_number = id_phone_number.getText().toString();
-        String password=id_password.getText().toString();
 
-        //int password = Integer.parseInt(id_password.getText().toString());
-        //int password_check = Integer.parseInt(id_password_check.getText().toString());
+        int password = Integer.parseInt(id_password.getText().toString());
+        int password_check = Integer.parseInt(id_password_check.getText().toString());
 
         if (TextUtils.isEmpty(username)) {
             Toast.makeText(this, "Введите имя", Toast.LENGTH_SHORT).show();
@@ -93,26 +109,42 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this, "Введите электронную почту", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(phone_number)) {
             Toast.makeText(this, "Введите номер телефона", Toast.LENGTH_SHORT).show();
-        } else if (TextUtils.isEmpty(password)) {
+        } else if (password==0 && password<99999) {
             Toast.makeText(this, "Введите пароль", Toast.LENGTH_SHORT).show();
-
+        }
+        else if(password_check!=password)
+        {
+            Toast.makeText(this, "Пароли не совпадают", Toast.LENGTH_SHORT).show();
         }
         else {
             progressBar.setVisibility(View.VISIBLE);
 
-            ValidatePhone(username, email, phone_number, password);
-
-            registration(email, password);
+            Toast.makeText(this, "Пароль проверен!", Toast.LENGTH_SHORT).show();
+            password_checked=Integer.toString(password);
+            registration(email, password_checked);
+            ValidatePhone(username, email, phone_number, password_checked, date);
 
         }
 
     }
 
-    public void ValidatePhone(String username, String email, String phone_number, String password) {
+    public void ValidatePhone(String username, String email, String phone_number, String password, String date) {
         String id= myRef.getKey();
-        User user=new User(id,username, email, phone_number, password);
-        myRef.push().setValue(user);
+        User user=new User(id,username, email, phone_number, password, date);
+        Log.d("Register Activity", "Cохранение данных в базу данных");
 
+        myRef.push().setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(RegisterActivity.this, "Данные сохранены в базу данных!!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(RegisterActivity.this, "Не удалось сохранить данные", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
@@ -147,7 +179,8 @@ public class RegisterActivity extends AppCompatActivity {
         id_password_check = findViewById(R.id.id_password_check);
         progressBar = findViewById(R.id.id_progressBar);
         sign_up_user = findViewById(R.id.btn_sign_up_user);
-
+        myRef = database.getReference(USERDATA);
+        tv_signIn=findViewById(R.id.tv_signIn);
     }
 
     @Override
