@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="190dp"
-    android:layout_height="250dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     android:layout_marginLeft="8dp"
     android:background="@drawable/product_design"
@@ -46,12 +46,12 @@
 
             <ImageView
                 android:id="@+id/is_liked_id"
-                android:layout_width="30dp"
+                android:layout_width="38dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_liked_off"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintHorizontal_bias="0.934"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.171" />
@@ -77,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="19dp"
                 android:text="date"
@@ -86,8 +86,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_price_item"
-                app:layout_constraintVertical_bias="0.812" />
+                app:layout_constraintTop_toBottomOf="@+id/id_product_address_" />
+
+            <TextView
+                android:id="@+id/id_product_address_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="address"
+                android:textColor="@color/colorSecondaryText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_price_item" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

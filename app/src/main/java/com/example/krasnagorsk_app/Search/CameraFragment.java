@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.krasnagorsk_app.Full_Info_Activity;
+import com.example.krasnagorsk_app.Liked.LikedActivity;
 import com.example.krasnagorsk_app.R;
 import com.example.krasnagorsk_app.Utils.ItemProduct;
 import com.example.krasnagorsk_app.ViewHolder;
@@ -44,6 +46,8 @@ public class CameraFragment extends Fragment {
     private FirebaseRecyclerAdapter adapter;
     private LinearLayoutManager linearLayoutManager;
 
+    private static int local=1;
+    //private ImageView liked;
 
     @Nullable
     @Override
@@ -52,6 +56,9 @@ public class CameraFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_camera, container, false);
         recyclerView = view.findViewById(R.id.list);
         myRef=database.getReference();
+
+
+
 
 
         Query query=FirebaseDatabase.getInstance("https://krasnagorsk-app-default-rtdb.europe-west1.firebasedatabase.app/").getReference().child("Products");
@@ -63,7 +70,9 @@ public class CameraFragment extends Fragment {
                         return new ItemProduct(snapshot.child("product_name").getValue().toString(),
                                 snapshot.child("product_price").getValue().toString(),
                                 snapshot.child("currentDate").getValue().toString(),
-                                snapshot.child("image_uri").getValue().toString());
+                                snapshot.child("image_uri").getValue().toString(),
+                                snapshot.child("product_description").getValue().toString(),
+                                snapshot.child("product_address").getValue().toString());
 
                     }
                 })
@@ -85,6 +94,7 @@ public class CameraFragment extends Fragment {
                 holder.setTxtDate(model.getId_date());
                 holder.setTxtName(model.getProduct_name());
                 holder.setTxtPrice(model.getProduct_price());
+                holder.setTxtaddress(model.getProduct_adres());
                 Glide.with(getContext())
                         .load(model.getImage_url())
                         .placeholder(R.drawable.default_place_holder)
@@ -97,14 +107,55 @@ public class CameraFragment extends Fragment {
                         String productId=model.getProduct_name();
                         String productPrice= model.getProduct_price();
                         String imageUrl=model.getImage_url();
+                        String productDes=model.getProduct_description();
+                        String product_adres= model.getProduct_adres();
 
                         Intent intent=new Intent(getActivity(), Full_Info_Activity.class);
                         intent.putExtra("productId",productId);
                         intent.putExtra("productPrice", productPrice);
                         intent.putExtra("imageUrl", imageUrl);
+                        intent.putExtra("productDescription", productDes);
+                        intent.putExtra("product_address", product_adres);
                         startActivity(intent);
                     }
                 });
+
+                holder.liked.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        local++;
+                        if(local%2==0)
+                        {
+                            holder.liked.setImageResource(R.drawable.liked_on);
+                            Toast.makeText(holder.liked.getContext(), "Добавлено в список избранных", Toast.LENGTH_SHORT).show();
+                            Intent intent=new Intent(getActivity(), LikedActivity.class);
+                            String productName= model.getProduct_name();
+                            intent.putExtra("productName",productName);
+                            startActivity(intent);
+
+
+                        }
+                        else if(local%2==1)
+                        {
+                            holder.liked.setImageResource(R.drawable.ic_liked_off);
+                        }
+                    }
+                });
+
+                /*
+
+                liked=view.findViewById(R.id.is_liked_id);
+
+                liked.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+
+
+                    }
+                });
+                */
+
 
             }
 
@@ -115,6 +166,8 @@ public class CameraFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
         adapter.startListening();
+
+
 
 
 

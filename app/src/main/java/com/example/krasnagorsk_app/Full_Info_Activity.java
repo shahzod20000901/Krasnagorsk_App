@@ -39,16 +39,20 @@ public class Full_Info_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_image);
-        //init();
-        product_image=findViewById(R.id.imageView);
+        setContentView(R.layout.activity_full_info);
+        init();
+
 
             String product_name_=getIntent().getExtras().get("productId").toString();
             String product_price_=getIntent().getExtras().get("productPrice").toString();
             String productImage=getIntent().getExtras().get("imageUrl").toString();
+            String productDes=getIntent().getExtras().get("productDescription").toString();
+            String product_addres=getIntent().getExtras().get("product_address").toString();
 
-            //product_name.setText(product_name_);
-          // product_price.setText(product_price_);
+            product_name.setText(product_name_);
+          product_price.setText(product_price_);
+          description_product.setText(productDes);
+          product_address.setText(product_addres);
 
         Glide.with(this)
                 .load(productImage)

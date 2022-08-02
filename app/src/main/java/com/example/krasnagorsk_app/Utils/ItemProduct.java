@@ -5,16 +5,29 @@ import android.net.Uri;
 import java.io.Serializable;
 
 public class ItemProduct {
-    private String product_name, product_price, id_date, image_url;
+    private String product_name, product_price, id_date, image_url, product_description, product_adres;
 
     public ItemProduct() {
     }
 
-    public ItemProduct(String product_name, String product_price, String id_date, String image_url) {
+
+
+
+    public ItemProduct(String product_name, String product_price, String id_date, String image_url, String product_description, String product_adres) {
         this.product_name = product_name;
         this.product_price = product_price;
         this.id_date = id_date;
         this.image_url = image_url;
+        this.product_description=product_description;
+        this.product_adres=product_adres;
+    }
+
+    public String getProduct_description() {
+        return product_description;
+    }
+
+    public void setProduct_description(String product_description) {
+        this.product_description = product_description;
     }
 
     public String getProduct_name() {
@@ -47,5 +60,13 @@ public class ItemProduct {
 
     public void setImage_url(String image_url) {
         this.image_url = image_url;
+    }
+
+    public String getProduct_adres() {
+        return product_adres;
+    }
+
+    public void setProduct_adres(String product_adres) {
+        this.product_adres = product_adres;
     }
 }

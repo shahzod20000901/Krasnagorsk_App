@@ -12,9 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -23,181 +25,133 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/cancel_transport"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/ic_cancel"
                         android:layout_margin="18dp"
-                        android:id="@+id/cancel_transport"
-                        />
+                        android:src="@drawable/ic_cancel" />
 
                     <TextView
+                        android:id="@+id/save_and_exit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Сохранить и выйти"
-                        android:textColor="@color/colorSecondaryText"
-                        android:textStyle="normal"
                         android:layout_marginStart="200dp"
                         android:layout_marginTop="18dp"
-                        android:id="@+id/save_and_exit"/>
+                        android:text="Сохранить и выйти"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textStyle="normal" />
 
 
                 </LinearLayout>
 
 
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="25dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginBottom="30dp"
                     android:text="Внешний вид"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginBottom="30dp"/>
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:text="Фотографии"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
                     android:layout_marginStart="18dp"
-                    android:layout_marginBottom="30dp"/>
-
+                    android:layout_marginBottom="30dp"
+                    android:text="Фотографии"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
 
                 <ImageView
                     android:id="@+id/set_image"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:src="@drawable/ic_photo"
                     android:layout_gravity="center"
-                    />
+                    android:src="@drawable/ic_photo" />
 
                 <TextView
                     android:id="@+id/text_add_photo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:text="Добавить фото"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="30dp"/>
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:text="Добавить фото"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
                 <ProgressBar
+                    android:id="@+id/etc_progressBar"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:id="@+id/etc_progressBar"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="Видео"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textSize="15dp" />
-
-
-                <LinearLayout
-                    android:id="@+id/link_video"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edit_design"
-                    android:orientation="horizontal">
-
-
-                    <EditText
-                        android:id="@+id/Search_line"
-                        android:layout_width="340dp"
-                        android:layout_height="50dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginStart="5dp"
-                        android:hint="Ссылка на видео"
-                        android:padding="8dp"
-                        android:textColorHint="#535151"
-                        android:background="@android:color/transparent"
-                        android:textColor="@color/white"
-
-                        />
-
-                    <ImageView
-                        android:id="@+id/help_question"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginLeft="5dp"
-                        android:src="@drawable/ic_question"/>
-
-
-                </LinearLayout>
 
                 <EditText
                     android:id="@+id/id_edit_product_name"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/edit_design"
                     android:hint="Наименование товара"
                     android:padding="8dp"
-                    android:textColorHint="#535151"
-                    android:background="@drawable/edit_design"
                     android:textColor="@color/white"
-                    />
+                    android:textColorHint="#535151" />
 
                 <EditText
                     android:id="@+id/id_edit_product_description"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/edit_design"
                     android:hint="Описание товара"
                     android:padding="8dp"
-                    android:textColorHint="#535151"
-                    android:background="@drawable/edit_design"
                     android:textColor="@color/white"
-                    />
+                    android:textColorHint="#535151" />
 
                 <EditText
                     android:id="@+id/id_edit_product_price"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/edit_design"
                     android:hint="Стоимость товара"
                     android:padding="8dp"
-                    android:textColorHint="#535151"
-                    android:background="@drawable/edit_design"
                     android:textColor="@color/white"
-                    />
+                    android:textColorHint="#535151" />
+
+
+
+
+
+
 
                 <Button
+                    android:id="@+id/btn_continue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="Добавить товар"
-                    android:background="@drawable/design_btn"
                     android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
                     android:layout_marginTop="30dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="100dp"
-                    android:id="@+id/btn_add_productDB"/>
+                    android:background="@drawable/design_btn"
+                    android:text="Продолжить"
+                    android:textColor="@color/white" />
 
 
             </LinearLayout>
